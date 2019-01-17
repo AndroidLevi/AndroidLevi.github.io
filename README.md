@@ -1,84 +1,66 @@
-# stepbystep  
-A jekyll theme, simple and clear, compatible with PC iPad and Phone (RWD)
+<p align="center">
+    <h2 align="center">Indigo Minimalist Jekyll Template - <a href="http://sergiokopplin.github.io/indigo/">Demo</a> · <a href="https://travis-ci.org/sergiokopplin/indigo"><img src="https://camo.githubusercontent.com/5393485b732749b3499264168fa8af60166071e8/68747470733a2f2f7472617669732d63692e6f72672f73657267696f6b6f70706c696e2f696e6469676f2e7376673f6272616e63683d67682d7061676573" alt="Build Status" data-canonical-src="https://travis-ci.org/sergiokopplin/indigo.svg?branch=gh-pages" style="max-width:100%;"></a></h2>
+</p>
 
-## Preview
-#### PC or Pad
-<img style="box-shadow: 10px 10px 5px #888888;border: 1px solid black;" src="https://github.com/jokinkuang/stepbystep/raw/master/article.png"></img>
-#### Mobile
-<div style="box-shadow: 10px 10px 5px #888888;border: 1px solid black;">
-<img style="width:50%;" src="https://github.com/jokinkuang/stepbystep/raw/master/mobile.png"></img>
-<img style="width:50%;" src="https://github.com/jokinkuang/stepbystep/raw/master/mobile2.png"></img>
-</div>
+<p align="center">This is a simple and minimalist template for Jekyll for those who likes to eat noodles.</p>
 
-## Features  
+***
 
-1. Compatible with PC iPad and Phone (RWD)
-2. Support blogger mood-talk(说说)
-3. Support post subdirs as post categories  
-  `_post/linux/nodejs/2016-9-1-About-Nodejs.md => linux and nodejs would merge into the post categories`
-4. Support pagination
-5. Support pinning posts
+<p align="center">
+    <b><a href="README.md#what-has-inside">What has inside</a></b>
+    |
+    <b><a href="README.md#setup">Setup</a></b>
+    |
+    <b><a href="README.md#settings">Settings</a></b>
+    |
+    <b><a href="README.md#how-to">How to</a></b>
+</p>
 
-## What Must To Be Set!
+<p align="center">
+    <img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png" />
+</p>
+
+## What has inside
+
+- [Jekyll](https://jekyllrb.com/), [Sass](http://sass-lang.com/) ~[RSCSS](http://rscss.io/)~ and [SVG](https://www.w3.org/Graphics/SVG/)
+- Tests with [Travis](https://travis-ci.org/)
+- Google Speed: [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F);
+- No JS. :sunglasses:
+
+## Setup
+
+0. :star: to the project. :metal:
+2. Fork the project [Indigo](https://github.com/sergiokopplin/indigo/fork)
+3. Edit `_config.yml` with your data (check <a href="README.md#settings">settings</a> section)
+4. Write some posts :bowtie:
+
+If you want to test locally on your machine, do the following steps also:
+
+1. Install [Jekyll](http://jekyllrb.com), [NodeJS](https://nodejs.org/) and [Bundler](http://bundler.io/).
+2. Clone the forked repo on your machine
+3. Enter the cloned folder via terminal and run `bundle install`
+4. Then run `bundle exec jekyll serve --config _config.yml,_config-dev.yml`
+5. Open it in your browser: `http://localhost:4000`
+6. Test your app with `bundle exec htmlproofer ./_site`
+7. Do you want to use the [jekyll-admin](https://jekyll.github.io/jekyll-admin/) plugin to edit your posts? Go to the admin panel: `http://localhost:4000/admin`. The admin panel will not work on GitHub Pages, [only locally](https://github.com/jekyll/jekyll-admin/issues/341#issuecomment-292739469).
+
+## Settings
+
+You must fill some informations on `_config.yml` to customize your site.
+
 ```
-title:         # your title
-author:        # your name
-email:         # your email
-description: > # your description
+name: John Doe
+bio: 'A Man who travels the world eating noodles'
+picture: 'assets/images/profile.jpg'
+...
 
-domain: "http://yourdomain.github.io" # your domain
-
-page_size: 2   # your pagination page size
-
-duoshuo_short_name: "sbys"              # your duoshuo name xxx.duoshuo.com
-duoshuo_user_uid: "6324572809590735618" # your duoshuo user uid
-duoshuo_user_name: "xk"                 # your duoshuo user name
-
-google_analytics_id: ""                 # your google analytics id
-baidu_tongji_id: ""                     # your baidu tongji id
+and lot of other options, like width, projects, pages, read-time, tags, related posts, animations, multiple-authors, etc.
 ```
-*NOTE* **If you do NOT set the duoshuo short name, all comments would commit to this demo site !**
 
-## Install
-assume the github username is "hello" then:  
+## How To?
 
-1. create a repository named "hello.github.io"  
-2. clone this repository  
-  `git clone https://github.com/jokinkuang/stepbystep.git`  
-3. push the whole thing to your repo "hello.github.io"  
-  `git remote set-url origin https://github.com/hello/hello.github.io.git`  
-  `git push origin master`  
-4. browse "hello.github.io"  
+Check the [FAQ](./FAQ.md) if you have any doubt or problem.
 
-> if your github username is "world" then replace upper "hello" all to "world"  
+---
 
-## Custom Domain  
-if you want to visit "www.hello.com" instead of "hello.github.io" then:  
-
-1. create a file named "CNAME" (the file is already exist)  
-2. buy the "www.hello.com" domain  
-3. add following to the "CNAME"  
-  `www.hello.com`  
-4. go to the Shop where your domain bought and set the Domain DNS to:  
-  | prefix | record-type |      host       |  
-  |   www  |   CNAME     | hello.github.io |  
-5. wait a long long time  
-6. browse "www.hello.com"
-
-## Custom Your Site  
-1. you need a [duoshuo](http://www.duoshuo.com) account  
-2. you need a [google-analytics](https://www.google.com/analytics/) account  
-3. all settings are in `_config.yml`
-
-## Other  
-whoever use this theme please add your site to the [wiki](https://github.com/jokinkuang/stepbystep/wiki)  
-
-## Bugs
-see [Release](https://github.com/jokinkuang/stepbystep/releases)
-
-## How It works  
-[English](http://www.jokinkuang.info/2016/09/03/stey-by-step-to-create-a-jekyll-theme.html)  
-[ 中文 ](http://www.jokinkuang.info/2016/09/03/how-to-create-the-jekyll-theme.html)
-
-## License  
-Under The [MIT](https://tldrlegal.com/license/mit-license) License
+[MIT](http://kopplin.mit-license.org/) License © Sérgio Kopplin

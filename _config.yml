@@ -1,67 +1,112 @@
-# Site settings
-title: Your Title
-author: author
-email:
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+# main text of home
+name: John Doe
+bio: A Man who travels the world eating noodles
 
-# Site URL NOTE: if your site is base on subdir /blog you should change base to "/blog"
-domain: "http://yourdomain.github.io" # the domain URL for your site
-base: ""  # the relative path that different with domain so you can test locally
+# twitter summary info
+description: A blog about technology and stuff related
 
-# Source URL NOTE: end with / cause it's [URL + FILE]
-w3c_url: "/w3c/"  # the base url of css js and images
-images_url: "/w3c/images/" # the base url of post images
-postfile: "/db/Postfile" # the Database
-sitefile: "/db/Sitefile" # the Database
+# if it's an external image, update below for true
+# better with square images
+external-image: false
+picture: assets/images/profile.jpg
 
-# pagination
-page_size: 3
+# If you want to include your resume, set to true
+# and specify source (external or local).
+resume: true
+resume-external: true
+resume-url: https://google.com/?q=my+resume
 
-# comment settings
-duoshuo_short_name: "sbys" # the user of user.domain.com
-duoshuo_user_uid: "6324572809590735618" # the admin user uid
-duoshuo_user_name: "xk" # the admin user name
-duoshuo_max_depth: "2"  # the max_depth setting in duoshuo comments
+url: https://koppl.in/indigo
+# your url: http://USERNAME.github.io
 
-# 3rd URL
-duoshuo_url: "/w3c/duoshuo/embed.min.js" # the local duoshuo comment plugin, you can change it to remote "http://static.duoshuo.com/"
-jquery_url: "http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js" # use cdn
-baiduTemplate_url: "/w3c/js/baiduTemplate.js" #use local
-google_analytics_id: ""
-baidu_tongji_id: ""
+permalink: /:title/
 
-# Build Settings
-excerpt_separator: "\n\n" # you can specify your own separator here, default is "\n\n" String
-permalink: /:year/:month/:day/:title.html
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: true # a newline in markdown text would be changed to <br>
-gems:
-  - jemoji    # enable the github emoji
-version: 1.1.0
+# To enable google analytics, supply your token below
+# analytics-google: 'UA-MYANALYTICS'
 
-# Following is got in Github Help With Configuring Jekyll
+# To enable piwik tracking, supply your url & site ID below
+# analytics-piwik-url: 'piwik.my-host.com'
+# analytics-piwik-id: 1
 
-# Github Page Default Settings which you can override:
-# kramdown:
-#   input: GFM
-#   hard_wrap: false
-# gems:
-#   - jekyll-coffeescript
-#   - jekyll-paginate
+# if you don't want comments in your posts, leave categories empty
+disqus:
+  shortname: mydisqus # enter this from your disqus account
+  categories: [blog, project] # only show disqus for posts that have these categories
 
-# Github Page override the following settings which you cannot change:
-# lsi: false
-# safe: true
-# source: [your repo's top level directory]
-# incremental: false
-# highlighter: rouge
-# gist:
-#  noscript: false
-# kramdown:
-#  math_engine: mathjax
+# if you don't have any of social below, comment the line
+facebook: myfacebook
+twitter: mytwitter
+# google: mygoogle
+# instagram: myinstagram
+# pinterest: mypinterest
+# linkedin: mylinkedin
+# youtube: myyoutube
+# spotify: myspotify
+github: mygithub
+# gitlab: mygitlab
+# lastfm: mylastfm
+# stackoverflow: 7044681/mystackoverflow
+# quora: userquora
+# reddit: username
+medium: medium
+# vimeo: myvimeo
+# lanyrd: mylanyrd
+email: myemail@gmail.com
+
+authors:
+    johndoe:
+        name: John Doe
+        bio: A Man who travels the world eating noodles
+        external-image: false
+        picture: assets/images/profile.jpg
+        twitter: johndoe
+    jamesfoster:
+        name: James Foster
+        bio: A Man who develops software with coffee
+        external-image: false
+        picture: assets/images/james.jpg
+        twitter: jamesfoster
+
+# do you want a larger site? change the option below
+# options: [normal, large] | default: normal
+# normal = 560px / large = 810px
+width: normal
+
+# if you don't need pagination, comment the *paginate* configs below
+# paginate: 5
+# paginate_path: "blog/:num/"
+
+# if you don't need projects, comment the *projects* configs below
+projects: true
+
+# if you don't need "about" or "blog", comment them out below
+about: true
+blog: true
+
+# do you want to show the "read time" of the posts?
+read-time: true
+
+# do you want to show the "tags" inside the posts?
+show-tags: true
+
+# related posts inside a post?
+related: true
+
+# Display links for next and previous posts for the specified categories
+post-advance-links: [blog]
+
+# show author block at the end of a post ?
+show-author: true
+
+# do you want some animations?
+animation: true
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-admin
+
+jekyll-mentions:
+    base_url: https://github.com
